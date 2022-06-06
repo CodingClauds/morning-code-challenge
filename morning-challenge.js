@@ -82,40 +82,62 @@
 // Solution(s):
 
 // Using a forloop
-function alternatingCase(string) {
-  string = string.split(" ");
-  let newString = [];
-  for (let i = 0; i < string.length; i++) {
-    let word = string[i];
-    word = word.split("");
-    let newWord = [];
-    for (let x = 0; x < word.length; x++) {
-      if (word[x] === word[x].toUpperCase()) {
-        newWord.push(word[x].toLowerCase());
-      } else {
-        newWord.push(word[x].toUpperCase());
-      }
+// function alternatingCase(string) {
+//   string = string.split(" ");
+//   let newString = [];
+//   for (let i = 0; i < string.length; i++) {
+//     let word = string[i];
+//     word = word.split("");
+//     let newWord = [];
+//     for (let x = 0; x < word.length; x++) {
+//       if (word[x] === word[x].toUpperCase()) {
+//         newWord.push(word[x].toLowerCase());
+//       } else {
+//         newWord.push(word[x].toUpperCase());
+//       }
+//     }
+//     newWord = newWord.join("");
+//     newString.push(newWord);
+//   }
+//   return newString.join(" ");
+// }
+
+// // using array methods
+// function alternatingCase(string) {
+//   string = string.split(" ");
+//   let newString = string.map((word) => {
+//     return word
+//       .split("")
+//       .map((letter) =>
+//         letter.toUpperCase() === letter
+//           ? letter.toLowerCase()
+//           : letter.toUpperCase()
+//       )
+//       .join("");
+//   });
+//   return newString.join(" ");
+// }
+
+// console.log(alternatingCase("Hello World!"));
+
+// Input = Array of numbers
+// Output = Single value counting the amount of Pairs. 20 + 20 = 1 unit value etc.
+
+// Count the numbers of pairs for each number, in an array of numbers
+//   Example input: [20, 20, 10, 20, 30, 10, 40, 50, 20, 30, 10, 10]
+//   Example output: 5
+
+const countingPairs = (arrOfNums) => {
+  let counter = 0;
+  arrOfNums.sort((a, b) => a - b);
+  for (let i = 0; i < arrOfNums.length; i += 2) {
+    if (arrOfNums[i] === arrOfNums[i + 1]) {
+      counter++;
+    } else {
+      i--;
     }
-    newWord = newWord.join("");
-    newString.push(newWord);
   }
-  return newString.join(" ");
-}
-
-// using array methods
-function alternatingCase(string) {
-  string = string.split(" ");
-  let newString = string.map((word) => {
-    return word
-      .split("")
-      .map((letter) =>
-        letter.toUpperCase() === letter
-          ? letter.toLowerCase()
-          : letter.toUpperCase()
-      )
-      .join("");
-  });
-  return newString.join(" ");
-}
-
-console.log(alternatingCase("Hello World!"));
+  return counter;
+};
+const array = [20, 20, 10, 20, 30, 10, 40, 50, 20, 30, 10, 10];
+console.log(countingPairs(array));
