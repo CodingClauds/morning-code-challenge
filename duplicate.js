@@ -51,15 +51,18 @@
 
 // and return an array with the new values
 
-let nums = [1, 1, 1, 2, 3, 4, 4, 4];
-
 function removeDoubles(nums) {
-  let singlesClub = [];
-
   for (let i = 0; i < nums.length; i++) {
-    console.log(nums[i]);
+    if (nums[i] === nums[i - 1]) {
+      console.log(`match @index ${i}`);
+      nums.splice(i, 1);
+      i--;
+    } else {
+      console.log("no match");
+    }
   }
+  return nums;
 }
-
-// console.log(nums);
-removeDoubles([1, 1, 1, 2, 3, 4, 4, 4]);
+let arr = [1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 67];
+// console.log(arr);
+console.log(removeDoubles(arr));
