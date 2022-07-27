@@ -21,10 +21,10 @@
 // - push the current value to the newArray, not the index
 // - return the newArray, not the original array
 
-// let removeActualDuplicates = (array) => {
-//   let newArray = [];
-//   for (let i = 0; i < array.length; i++) {
-//     if (newArray.indexOf(array[i]) === -1) {
+// let removeActualDuplicates = (nums) => {
+//   let newNumsList = [];
+//   for (let i = 0; i < nums.length; i++) {
+//     if (newNumsList.indexOf(nums[i]) === -1) {
 //       newArray.push(array[i])
 //     }
 //   }
