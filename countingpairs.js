@@ -45,21 +45,21 @@
 // if num is equal to num, add to count (variable)
 // else if continue loop
 
-function countDoubles(num) {
-  let tally = 0;
+// function countDoubles(num) {
+//   let tally = 0;
 
-  num.sort((a, b) => a - b);
-  console.log(num);
+//   num.sort((a, b) => a - b);
+//   console.log(num);
 
-  for (let i = 1; i <= num.length; i += 2) {
-    console.log(i);
-    if (num[i] === num[i + 1]) {
-      tally++;
-    } else {
-      i--;
-    }
-  }
-  return tally;
-}
+//   for (let i = 1; i <= num.length; i += 2) {
+//     console.log(i);
+//     if (num[i] === num[i + 1]) {
+//       tally++;
+//     } else {
+//       i--;
+//     }
+//   }
+//   return tally;
+// }
 
-console.log(countDoubles([20, 20, 10, 20, 30, 10, 40, 50, 20, 30, 10, 10]));
+// console.log(countDoubles([20, 20, 10, 20, 30, 10, 40, 50, 20, 30, 10, 10]));
