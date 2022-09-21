@@ -28,23 +28,23 @@
 
 // ==============================================================================================================================
 
-function thirdMax(nums) {
-  nums.sort((a, b) => b - a);
+// function thirdMax(nums) {
+//   nums.sort((a, b) => b - a);
 
-  let topThree = [];
+//   let topThree = [];
 
-  for (let i = 0; i < nums.length && topThree.length < 3; i++) {
-    if (nums[i] !== nums[i - 1]) {
-      topThree.push(nums[i]);
-    }
-  }
+//   for (let i = 0; i < nums.length && topThree.length < 3; i++) {
+//     if (nums[i] !== nums[i - 1]) {
+//       topThree.push(nums[i]);
+//     }
+//   }
 
-  if (topThree.length < 3) {
-    return topThree[0];
-  } else {
-    return topThree[2];
-  }
-}
+//   if (topThree.length < 3) {
+//     return topThree[0];
+//   } else {
+//     return topThree[2];
+//   }
+// }
 
-console.log(thirdMax([1, 2, 4, 3, 2, 3, 4, 5]));
+// console.log(thirdMax([1, 2, 4, 3, 2, 3, 4, 5]));
 // console.log(thirdMax([2, 1]));
