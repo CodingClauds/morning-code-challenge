@@ -1,0 +1,19 @@
+button {
+  background: black;
+  border: solid 1px white;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  outline: none;
+  border-radius: 20px;
+}
+button:hover {
+  transition: 0.9s ease-in-out;
+  background: white;
+  color: black;
+  border: 2px solid black;
+}

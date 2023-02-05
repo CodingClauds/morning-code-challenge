@@ -1,0 +1,23 @@
+$baseColor: black;
+$invertColor: white;
+
+button {
+  background: $baseColor;
+  border: solid 1px $invertColor;
+  color: $invertColor;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  outline: none;
+  border-radius: 20px;
+
+  &:hover {
+    transition: 0.9s ease-in-out;
+    background: $invertColor;
+    color: $baseColor;
+    border: 2px solid black;
+  }
+}
